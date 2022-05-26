@@ -1,0 +1,30 @@
+{
+  "name": "bookshelf-db",
+  "version": "1.0.0",
+  "description": "Bookshelf Apps\r --\r Sebuah aplikasi rak buku yang dapat menyimpan teks judul, penulis, dan tahun buku.\r --\r Kolom pencarian dan storage belum tersedia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayanugie/bookshelf-apps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayanugie/bookshelf-apps/issues"
+  },
+  "homepage": "https://github.com/jayanugie/bookshelf-apps#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
