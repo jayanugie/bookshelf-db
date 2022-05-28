@@ -141,9 +141,14 @@ main {
 .book_shelf > .book_list > .book_item > .green {
     background: darkgreen;
     color: white;
+    width: 130px;
 }
 .book_shelf > .book_list > .book_item > .red {
     background-color: darkred;
     color: white;
+    width: 130px;
 }
-
+a {
+    text-decoration: none;
+    color: white;
+}

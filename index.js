@@ -8,7 +8,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// HALAMAN UTAMA
+// MENAMPILKAN HALAMAN UTAMA
 app.get('/', (req, res) => {
     Unread.findAll()
     .then(unread => {
@@ -28,6 +28,14 @@ app.post('/', (req, res) => {
     .then(unread => {
         res.redirect('/');
     });
+});
+
+// MENGHAPUS DATA BUKU
+app.get('/delete/:id', (req, res) => {
+    Unread.destroy({
+        where: { id: req.params.id }
+    });
+    return res.redirect('/');
 });
 
 

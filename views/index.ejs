@@ -54,7 +54,7 @@
                 <p><%= i.author %></p>
                 <p class="year"><%= i.year %></p>
                 <button class="green">Selesai dibaca</button>
-                <button class="red">Hapus buku</button>
+                <button class="red"><a href="/delete/<%= i.id %>">Hapus buku</a></button>
             </div>
             <% }); %>
         </div>
