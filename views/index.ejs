@@ -17,18 +17,18 @@
 <main>
     <section class="input_section">
         <h2>Masukkan Buku Baru</h2>
-        <form id="inputBook">
+        <form id="inputBook" method="POST" action="/">
             <div class="input">
-                <label for="inputBookTitle">Judul</label>
-                <input id="inputBookTitle" type="text" required>
+                <label for="title">Judul</label>
+                <input id="inputBookTitle" type="text" name="title" required>
             </div>
             <div class="input">
-                <label for="inputBookAuthor">Penulis</label>
-                <input id="inputBookAuthor" type="text" required>
+                <label for="author">Penulis</label>
+                <input id="inputBookAuthor" type="text" name="author" required>
             </div>
             <div class="input">
-                <label for="inputBookYear">Tahun</label>
-                <input id="inputBookYear" type="number" required>
+                <label for="year">Tahun</label>
+                <input id="inputBookYear" type="number" name="year" required>
             </div>
             <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
         </form>
@@ -47,9 +47,16 @@
         <h2>Belum selesai dibaca</h2>
 
         <div id="incompleteBookshelfList" class="book_list">
-
+            <% unread.forEach(i=> { %>
             <!--BUKU BELUM DIBACA-->
-
+            <div class="book_item">
+                <h3><%= i.title %></h3>
+                <p><%= i.author %></p>
+                <p class="year"><%= i.year %></p>
+                <button class="green">Selesai dibaca</button>
+                <button class="red">Hapus buku</button>
+            </div>
+            <% }); %>
         </div>
     </section>
 
@@ -63,8 +70,9 @@
         </div>
     </section>
 </main>
-
+<!--
 <script src="/js/dom.js" type="text/javascript"></script>
 <script src="/js/script.js" type="text/javascript"></script>
+-->
 </body>
 </html>
